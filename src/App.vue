@@ -49,7 +49,7 @@
 </script>
 
 <style lang="stylus" type="type/stylus" rel="stylesheet/stylus">
-    @import "common/stylus/mixin.styl"
+    @import "common/stylus/mixin.styl";
 
     .tab
       display: flex
