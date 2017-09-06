@@ -9,7 +9,7 @@
           <div class="num" v-show="totalCount>0">{{totalCount}}</div>
         </div>
         <div class="price" :class="{'highlight': totalPrice>0}">￥{{totalPrice}}</div>
-        <div class="desc">另需配送费{{deliveryPrice}}元</div>
+        <div class="desc">另需配送费￥{{deliveryPrice}}</div>
       </div>
       <div class="content-right">
         <div class="pay" :class="payClass">
@@ -26,12 +26,7 @@
       selectFoods: {
         type: Array,
         default() {
-          return [
-            {
-              price: 10,
-              count: 1
-            }
-          ];
+          return [];
         }
       },
       deliveryPrice: {
@@ -62,15 +57,15 @@
         if (this.totalPrice === 0) {
           return `￥${this.minPrice}元起送`;
         } else if (this.totalPrice < this.minPrice) {
-          return `还差￥${this.minPrice - this.totalPrice}元起送`;
-        } else if (this.totalPrice > this.minPrice) {
+          return `还差￥${this.minPrice - this.totalPrice}起送`;
+        } else if (this.totalPrice >= this.minPrice) {
           return '去结算';
         }
       },
       payClass: function () {
         if (this.totalPrice < this.minPrice) {
           return 'not-enough';
-        } else if (this.totalPrice > this.minPrice) {
+        } else if (this.totalPrice >= this.minPrice) {
           return 'enough';
         }
       }
