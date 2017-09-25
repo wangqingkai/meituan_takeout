@@ -116,6 +116,9 @@
         let ref = foodList[index];
         this.foodsScroll.scrollToElement(ref, 300);
       },
+      _drop: function () {
+
+      },
       _initScroll: function () {
         this.menuScroll = new BScroll(this.$refs.menuWrapper, {
           click: true
