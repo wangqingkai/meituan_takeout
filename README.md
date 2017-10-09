@@ -1,6 +1,6 @@
-# meituan
+# meituan_takeout
 
-> meituan_takeout
+仿美团外卖APP，查看商家信息、浏览商品详情、下单全流程。
 
 ## Build Setup
 
